@@ -2430,7 +2430,7 @@ class DrupalWebTestCase extends DrupalTestCase {
       );
       $conf = "\$conf['blocked_ips'] = array();";
       $databases = "\$databases['default']['default'] = " . var_export($db_array, TRUE) . ';';
-      $data = "<?php\n\n$byline\n$databases\n\n$conf\n\n?>";
+      $data = "<?php\n\n$byline\n$databases\n\n$conf\n\n";
       file_put_contents("$site/settings.php", $data);
     }
 
